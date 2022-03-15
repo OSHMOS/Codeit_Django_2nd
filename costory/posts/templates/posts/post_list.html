@@ -19,11 +19,11 @@
     </div>
     <div class="post_container">
         {% for post in posts %}
-            <div class="post"><a href={% url 'post-detail' post.id %}>
+            <div class="post">
+            <a href={% url 'post-detail' post.id %}>
                 <h2 class="title">{{post.title}}</h2>
                 <p class="date">{{post.dt_created}}</p>
                 <p class="text">{{post.content | slice:":100"}}</p>
-                {% comment %} 리스트 슬라이싱과 비슷한 문법 {% endcomment %}
             </a></div>  
         {% endfor %}
     </div>
